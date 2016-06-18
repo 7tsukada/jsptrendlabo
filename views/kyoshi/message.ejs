@@ -5,8 +5,8 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
     <style type="text/css">
     <!--
-    .col1{width:100px;}
-    .col2{width:300px;}
+    .col1{width:120px;}
+    .col2{width:360px;}
     .table{list-style:none;mergin:0;padding:0;}
     .table li{clear:both;}
     .table li div{display:block;float:left;}
@@ -24,7 +24,7 @@
 <%
 for( var i in messages ) {　%>
     <li>
-      <div class="col1"><%= messages[i].post.toLocaleDateString([ 'jp' ])%> <%= messages[i].post.toLocaleTimeString([ 'jp' ])%></div>
+      <div class="col1"><%= toTYODateString(messages[i].post)%></div>
       <div class="col2"><%= messages[i].message%></div>
     </li>
 <%
