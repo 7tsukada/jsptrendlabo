@@ -39,6 +39,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', routes.index);
 app.use('/user', require('./routes/user'));
+app.use('/kyoshi', require('./routes/kyoshi/message'));
 
 
 // error handling middleware should be loaded after the loading the routes

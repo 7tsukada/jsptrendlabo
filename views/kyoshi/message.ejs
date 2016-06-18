@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>kyoshi/messages</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+<%
+for( var i in messages ) {　%>
+<%= messages[i].post%>&nbsp;<%= messages[i].message%><br />
+<%
+}
+%>
+  </body>
+</html>
