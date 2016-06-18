@@ -3,17 +3,33 @@
   <head>
     <title>kyoshi/messages</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <style type="text/css">
+    <!--
+    .col1{width:100px;}
+    .col2{width:300px;}
+    .table{list-style:none;mergin:0;padding:0;}
+    .table li{clear:both;}
+    .table li div{display:block;float:left;}
+    -->
+    </style>
   </head>
   <body>
+    <div>
+    <form method="post" action="post">
+      message:<input name="message">
+      <input type="submit" value="POST">
+    </form>
+    </div>
+    <ul class="table">
 <%
 for( var i in messages ) {　%>
-<%= messages[i].post%>&nbsp;<%= messages[i].message%><br />
+    <li>
+      <div class="col1"><%= messages[i].post.toLocaleDateString([ 'jp' ])%> <%= messages[i].post.toLocaleTimeString([ 'jp' ])%></div>
+      <div class="col2"><%= messages[i].message%></div>
+    </li>
 <%
 }
 %>
-    <form method="post" action="post">
-        message:<input name="message">
-        <input type="submit" value="POST">
-    </form>
+    </ul>
   </body>
 </html>
