@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Daily</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <style>
+    table {border-collapse: collapse;}
+    td {border: 1px gray solid; width: 150px;}
+    </style>
+  </head>
+  <body>
+    <h1>Daily</h1>
+    <form>
+      <input type="date" name="date" required/>
+      <input type="text" name="content" required/>
+      <button type="submit" formaction="./daily/create" formmethod="post">post</button>
+    </form>
+    <hr>
+    <div>
+      <table>
+<%  dailies.forEach(function(d) { %>
+          <tr>
+            <td><%= d.date.toISOString().substr(0,10) %></td>
+            <td><%= d.content %></td>
+          </td>
+<% }) %>
+      </table>
+    </div>
+  </body>
+</html>
