@@ -19,7 +19,8 @@ Database - c9 (The database username)
 global.db = {
     Sequelize: Sequelize,
     sequelize: sequelize,
-    User: sequelize.import(__dirname + '/user')
+    User: sequelize.import(__dirname + '/user'),
+    Tsuka_Daily: sequelize.import(__dirname + '/tsuka_daily')
 }
 
 module.exports = global.db;
