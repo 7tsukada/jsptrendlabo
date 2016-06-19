@@ -20,7 +20,8 @@ global.db = {
     Sequelize: Sequelize,
     sequelize: sequelize,
     User: sequelize.import(__dirname + '/user'),
-    Tsuka_Daily: sequelize.import(__dirname + '/tsuka_daily')
+    Tsuka_Daily: sequelize.import(__dirname + '/tsuka_daily'),
+    KyoshiMessage: sequelize.import(__dirname + '/kyoshi_message')
 }
 
 module.exports = global.db;

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>kyoshi/messages</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <style type="text/css">
+    <!--
+    .col1{width:120px;}
+    .col2{width:360px;}
+    .table{list-style:none;mergin:0;padding:0;}
+    .table li{clear:both;}
+    .table li div{display:block;float:left;}
+    -->
+    </style>
+  </head>
+  <body>
+    <div>
+    <form method="post" action="post">
+      message:<input name="message">
+      <input type="submit" value="POST">
+    </form>
+    </div>
+    <ul class="table">
+<%
+for( var i in messages ) {　%>
+    <li>
+      <div class="col1"><%= toTYODateString(messages[i].post)%></div>
+      <div class="col2"><%= messages[i].message%></div>
+    </li>
+<%
+}
+%>
+    </ul>
+  </body>
+</html>
