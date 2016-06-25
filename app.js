@@ -39,7 +39,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', routes.index);
 app.use('/user', require('./routes/user'));
-app.use('/tsuka/daily', require('./routes/tsuka/daily'));
+app.use('/tsuka', require('./routes/tsuka'));
 app.use('/kyoshi', require('./routes/kyoshi/message'));
 
 
